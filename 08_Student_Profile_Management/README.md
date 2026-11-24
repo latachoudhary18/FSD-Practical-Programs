@@ -1,9 +1,3 @@
-# Student Profile Management
+# 08 Student Profile Management
 
-React + Vite application.
-
-```bash
-npm install
-npm run dev
-```
-Open the local URL printed in the terminal. Stop with `Ctrl + C`.
+Student Profile Management using React components and useState. Run inside this folder: npm install, then npm run dev. Main UI: src/App.jsx; entry: src/main.jsx; styles: src/style.css; Vite config: vite.config.js.

@@ -1,0 +1,9 @@
+{
+  "name": "node-file-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "File creation, writing, appending, reading and deleting using fs",
+  "scripts": {
+    "start": "node fileapp.js"
+  }
+}

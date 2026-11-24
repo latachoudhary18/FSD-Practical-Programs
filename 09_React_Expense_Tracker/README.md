@@ -1,9 +1,3 @@
-# Expense Tracker
+# 09 React Expense Tracker
 
-React + Vite application.
-
-```bash
-npm install
-npm run dev
-```
-Open the local URL printed in the terminal. Stop with `Ctrl + C`.
+Expense Tracker using React state, forms, list rendering and totals. Run inside this folder: npm install, then npm run dev. Main component: src/App.jsx. Build check: npm run build.

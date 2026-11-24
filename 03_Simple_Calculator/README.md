@@ -1,3 +1,3 @@
-# Simple Calculator
+# 03 Simple Calculator
 
-Open `index.html` in a browser. No installation is required.
+Simple calculator using JavaScript functions, conditions and DOM. Open index.html in a browser. Enter two values, select an operator and click Calculate.

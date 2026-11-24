@@ -1,3 +1,3 @@
-# Online Quiz
+# 06 Online Quiz
 
-Open `index.html` in a browser. No installation is required.
+Online Quiz using arrays, loops, radio inputs and DOM. Open index.html in a browser, select answers and click Submit Quiz.

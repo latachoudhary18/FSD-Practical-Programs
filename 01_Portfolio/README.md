@@ -1,3 +1,3 @@
-# Personal Portfolio
+# 01 Portfolio
 
-Open `index.html` in a browser. No installation is required.
+Portfolio webpage using HTML5 and CSS3. Open index.html in a browser. Files: index.html (page structure), style.css (design). No installation required.

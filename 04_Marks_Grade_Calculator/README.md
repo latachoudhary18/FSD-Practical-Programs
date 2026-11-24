@@ -1,3 +1,3 @@
-# Student Marks and Grade Calculator
+# 04 Marks Grade Calculator
 
-Open `index.html` in a browser. No installation is required.
+Student marks and grade calculator using JavaScript loops, arrays and conditions. Open index.html in a browser. Enter marks between 0 and 100 for all subjects.

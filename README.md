@@ -1,59 +1,33 @@
-# Full Stack Development Practicals (15 Programs)
+# Full Stack Development – 15 Practical Programs
 
-A collection of 15 beginner-friendly practical programs for Full Stack Web Development revision. Each practical is isolated in its own folder.
-
-## Programs
-1. Personal Portfolio — HTML/CSS
-2. Student Registration Form — HTML/CSS
-3. Simple Calculator — JavaScript
-4. Student Marks and Grade Calculator — JavaScript
-5. Interactive To-Do List — JavaScript DOM
-6. Online Quiz — JavaScript
-7. Basic React Application — React + Vite
-8. Student Profile Management — React + Vite
-9. Expense Tracker — React + Vite
-10. Feedback Collection — React + Vite
-11. Basic Node.js Application
-12. File Management — Node.js fs
-13. Asynchronous Programming — callbacks and event loop
-14. Student Management — Express REST API
-15. Online Book Store — Express API
+This repository contains one independent folder for each of the 15 practical questions. Open the root folder in VS Code, then open the required practical folder.
 
 ## Requirements
-- VS Code
-- Chrome or Edge
-- Node.js LTS and npm (for practicals 7–15)
+- Experiments 1–6: Any modern web browser; no Node.js required.
+- Experiments 7–10: Node.js and npm; run `npm install` inside the selected practical folder, then `npm run dev`.
+- Experiments 11–13: Node.js; no third-party packages required.
+- Experiments 14–15: Node.js 18+ and npm; run `npm install`, then `npm start`.
 
-## Run HTML/CSS/JavaScript practicals (1–6)
-Open the relevant folder and double-click `index.html`, or use VS Code Live Server.
+## Folder map
+| Practical | Folder | Main file / run command |
+|---|---|---|
+| 1 Portfolio | `01_Portfolio` | `index.html` |
+| 2 Student Registration | `02_Student_Registration` | `index.html` |
+| 3 Simple Calculator | `03_Simple_Calculator` | `index.html` |
+| 4 Marks and Grade Calculator | `04_Marks_Grade_Calculator` | `index.html` |
+| 5 Interactive To-Do List | `05_Interactive_ToDo` | `index.html` |
+| 6 Online Quiz | `06_Online_Quiz` | `index.html` |
+| 7 React Basic | `07_React_Basic` | `npm run dev` |
+| 8 Student Profile Management | `08_Student_Profile_Management` | `npm run dev` |
+| 9 Expense Tracker | `09_React_Expense_Tracker` | `npm run dev` |
+| 10 Feedback Collection | `10_React_Feedback_Collection` | `npm run dev` |
+| 11 Basic Node.js | `11_Node_Basic` | `node hello.js` |
+| 12 File Management | `12_Node_File_Management` | `node fileapp.js` |
+| 13 Async and Event Loop | `13_Node_Async_Event_Loop` | `node eventloop.js` |
+| 14 Student Management API | `14_Express_Student_Management` | `npm start` |
+| 15 Online Book Store API | `15_Express_Online_Book_Store` | `npm start` |
 
-## Run React practicals (7–10)
-Open a terminal in the selected practical folder:
-```bash
-npm install
-npm run dev
-```
-Open the localhost URL shown by Vite. Stop the server with `Ctrl + C`.
+## Important
+Run npm commands from inside the practical's own folder, not from the repository root. Each React/Express folder has its own `package.json`. `node_modules` is not committed; install dependencies with `npm install`. Express practicals use in-memory sample data for easy exam demonstration; data resets when the server restarts.
 
-## Run Node.js practicals (11–13)
-Open a terminal in the relevant folder and run:
-```bash
-node hello.js
-node fileapp.js
-node eventloop.js
-```
-Run only the command corresponding to the practical you are practising.
-
-## Run Express practicals (14–15)
-In the selected folder:
-```bash
-npm install
-npm start
-```
-The server runs at `http://localhost:3000`. Use a browser for GET endpoints and Postman or PowerShell for POST/PUT/DELETE. Stop with `Ctrl + C`.
-
-## Important notes
-- React and Express dependencies are installed locally in each project folder.
-- Express examples use in-memory arrays; records reset when the server restarts.
-- Do not upload `node_modules/` to GitHub.
-- Adapt names, labels and sample values to the exact scenario given in the exam.
+See `GITHUB_PUSH_GUIDE.md` for GitHub upload instructions.

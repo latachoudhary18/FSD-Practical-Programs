@@ -1,0 +1,9 @@
+{
+  "name": "node-basic",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Basic Node.js application using console, functions and process object",
+  "scripts": {
+    "start": "node hello.js"
+  }
+}

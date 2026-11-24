@@ -1,9 +1,3 @@
-# Feedback Collection
+# 10 React Feedback Collection
 
-React + Vite application.
-
-```bash
-npm install
-npm run dev
-```
-Open the local URL printed in the terminal. Stop with `Ctrl + C`.
+Feedback Collection app using React state and form events. Run inside this folder: npm install, then npm run dev. Main component: src/App.jsx. Build check: npm run build.

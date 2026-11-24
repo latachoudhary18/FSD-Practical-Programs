@@ -1,43 +1,34 @@
-# Push this repository to GitHub (Windows + VS Code)
+# GitHub and VS Code quick guide
 
-1. Create a new **public or private** repository on GitHub. Suggested name: `FSD-Practical-Programs`.
-2. Do not initialize it with a README, license or .gitignore because these are already present locally.
-3. Extract this ZIP.
-4. Open the extracted `FSD_Practicals_15` folder in VS Code (File → Open Folder).
-5. Open Terminal → New Terminal. Confirm the terminal is at the root folder containing README.md.
-6. Run these commands one by one:
+## First-time upload
+1. Extract this ZIP.
+2. Open the `FSD_Practicals_15` root folder in VS Code.
+3. Create an empty GitHub repository (do not initialize it with a README).
+4. In the VS Code terminal, run:
 
 ```bash
-git --version
 git init
 git add .
-git status
-git commit -m "Add all 15 FSD practical programs"
+git commit -m "Add 15 FSD practical programs"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/FSD-Practical-Programs.git
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 git push -u origin main
 ```
 
-Replace `YOUR-USERNAME` with your GitHub username and use your actual repository URL.
-
-For later updates:
+## Later updates
 ```bash
 git add .
 git commit -m "Update practical programs"
 git push
 ```
 
-If Git asks for identity, configure it once:
-```bash
-git config --global user.name "Your GitHub Name"
-git config --global user.email "your-github-email@example.com"
-```
+## During the exam
+Clone the repository before the exam and keep the local copy. In VS Code Explorer, open the folder for the required practical. This local copy works without GitHub or internet.
 
-If `remote origin already exists`, use:
-```bash
-git remote set-url origin https://github.com/YOUR-USERNAME/FSD-Practical-Programs.git
-```
+## Run commands
+- HTML practicals 1–6: open the folder's `index.html` in a browser.
+- React practicals 7–10: open terminal in that practical folder; run `npm install`, then `npm run dev`.
+- Node practicals 11–13: run `node hello.js`, `node fileapp.js`, or `node eventloop.js`.
+- Express practicals 14–15: run `npm install`, then `npm start`. Open a second terminal and run `npm test` to exercise the API.
 
-If GitHub asks you to authenticate, complete the browser sign-in prompt. Never put your password or personal access token inside source code.
-
-Before pushing, check that `.env` and `node_modules/` are not staged. The `.gitignore` file excludes them.
+Never commit `node_modules`, `.env` files, passwords or access tokens.

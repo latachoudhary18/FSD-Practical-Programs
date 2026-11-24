@@ -1,0 +1,9 @@
+{
+  "name": "node-async-event-loop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Callbacks, timers and event-loop execution order",
+  "scripts": {
+    "start": "node eventloop.js"
+  }
+}

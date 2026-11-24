@@ -1,3 +1,3 @@
-# Node.js File Management
-Run `node fileapp.js` to create, write, append, read and delete `notes.txt`.
-To keep the file for inspection, comment out the `unlinkSync` lines.
+# 12 Node File Management
+
+File Management using the built-in fs module. Run: node fileapp.js (or npm start). The program creates notes.txt, writes, appends, reads and then deletes it. No npm install is required.
