@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Registration</title><link rel="stylesheet" href="style.css"></head>
+<body><form id="registrationForm"><h1>Student Registration</h1>
+<label>Full Name<input type="text" name="name" required></label>
+<label>Email<input type="email" name="email" required></label>
+<label>Password<input type="password" minlength="6" required></label>
+<label>Date of Birth<input type="date" required></label>
+<label>Gender<select required><option value="">Select</option><option>Female</option><option>Male</option><option>Other</option></select></label>
+<label>Course<input type="text" required></label><button>Register</button><p id="message"></p></form>
+<script>document.getElementById("registrationForm").addEventListener("submit",function(e){e.preventDefault();document.getElementById("message").textContent="Registration submitted successfully!";this.reset();});</script>
+</body></html>

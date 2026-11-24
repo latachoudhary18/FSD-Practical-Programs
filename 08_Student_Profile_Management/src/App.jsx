@@ -1,0 +1,2 @@
+import { useState } from "react";
+export default function App(){const [name,setName]=useState("Aarav");const [email,setEmail]=useState("aarav@example.com");const [course,setCourse]=useState("AI & Data Science");return <main><h1>Student Profile</h1><label>Name<input value={name} onChange={e=>setName(e.target.value)}/></label><label>Email<input value={email} onChange={e=>setEmail(e.target.value)}/></label><label>Course<input value={course} onChange={e=>setCourse(e.target.value)}/></label><h2>Profile Preview</h2><p>{name}</p><p>{email}</p><p>{course}</p></main>;}

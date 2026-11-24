@@ -1,0 +1,15 @@
+const express=require("express");
+const app=express();
+app.use(express.json());
+let books=[{id:1,title:"Wings of Fire",price:250,stock:10},{id:2,title:"The Alchemist",price:300,stock:8}];
+let cart=[],orders=[];
+app.get("/books",(req,res)=>res.json(books));
+app.get("/books/:id",(req,res)=>{const b=books.find(x=>x.id===Number(req.params.id));if(!b)return res.status(404).json({message:"Book not found"});res.json(b);});
+app.post("/books",(req,res)=>{const {title,price,stock}=req.body;if(!title||typeof price!=="number"||price<=0||!Number.isInteger(stock)||stock<0)return res.status(400).json({message:"Invalid book details"});const b={id:books.length?Math.max(...books.map(x=>x.id))+1:1,title,price,stock};books.push(b);res.status(201).json(b);});
+app.put("/books/:id",(req,res)=>{const b=books.find(x=>x.id===Number(req.params.id));if(!b)return res.status(404).json({message:"Book not found"});const {title,price,stock}=req.body;if(!title||typeof price!=="number"||price<=0||!Number.isInteger(stock)||stock<0)return res.status(400).json({message:"Invalid book details"});Object.assign(b,{title,price,stock});res.json(b);});
+app.delete("/books/:id",(req,res)=>{const id=Number(req.params.id);if(!books.some(b=>b.id===id))return res.status(404).json({message:"Book not found"});books=books.filter(b=>b.id!==id);res.json({message:"Book deleted"});});
+app.get("/cart",(req,res)=>res.json(cart));
+app.post("/cart",(req,res)=>{const {bookId,quantity}=req.body;const book=books.find(b=>b.id===Number(bookId));if(!book)return res.status(404).json({message:"Book not found"});if(!Number.isInteger(quantity)||quantity<=0)return res.status(400).json({message:"Invalid quantity"});const item=cart.find(x=>x.bookId===book.id),oldQty=item?item.quantity:0;if(oldQty+quantity>book.stock)return res.status(400).json({message:"Insufficient stock"});if(item)item.quantity+=quantity;else cart.push({bookId:book.id,title:book.title,price:book.price,quantity});res.status(201).json(cart);});
+app.post("/orders",(req,res)=>{if(!cart.length)return res.status(400).json({message:"Cart is empty"});for(const item of cart){const b=books.find(x=>x.id===item.bookId);if(!b||b.stock<item.quantity)return res.status(400).json({message:"Insufficient stock"});}const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);cart.forEach(item=>{books.find(b=>b.id===item.bookId).stock-=item.quantity;});const order={id:orders.length?Math.max(...orders.map(o=>o.id))+1:1,items:cart.map(x=>({...x})),total,status:"Confirmed"};orders.push(order);cart=[];res.status(201).json(order);});
+app.get("/orders",(req,res)=>res.json(orders));
+app.listen(3000,()=>console.log("Book Store API running on http://localhost:3000"));
